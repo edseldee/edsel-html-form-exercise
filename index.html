@@ -8,15 +8,48 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- **********************Title of  the form -->
+    <!-- **********************Title of  the form******************** -->
     <h1>Registration Form</h1>
-    <!-- **********************FORM -->
+    <p>Please Fill All Required Information</p>
+    <!-- **********************FORM**************************-->
+    <form action="#">
 
-
-    <!--fieldset 1  -->
+    <!-- fieldset 1  first name, last name,email, password-->
+        <fieldset>
+            <label for="#">Enter your First Name:<input type="text" name="firstname" required> </label>
+            <label for="#">Enter your Last Name:<input type="text" name="lastname" required> </label>
+            <label for="#">Enter your Email:<input type="email" name="email" required> </label>
+            <!-- <label for="#">Enter your Password<input type="password" minlength="8" required> </label> -->
+            <label for="#">Enter your Password:<input type="password" pattern="[a-z0-5]{8}" required> </label>
+        </fieldset>
 
     <!--fieldset 2  -->
+        <fieldset>
+            <label for="#"><input class="inline" input type="radio" name="account-type" id="">Business Partner</label>
+            <label for="#"><input class="inline" input type="checkbox" required>I accept the <a href="https://www.termsandconditionsgenerator.com/">Terms and Conditions</a></label>
+            <label for="#"><input class="inline" input type="radio" name="account-type" id="">Personal Account</label>
+        </fieldset>
 
     <!--fieldset 3  -->
+        <fieldset>
+            <label>Upload a profile picture: <input type="file" name="fileupload"></label>
+            <label for="#">Input your Age (years):<input type="number" name="age min="13" max="120"></label>
+            <label>
+                How Did you hear from us?
+                <select>
+                    <option value="">(select one)</option>
+                    <option value="1" name="news">News</option>
+                    <option value="2" name="blog">Blog</option>
+                    <option value="3" name="forums">Forums</option>
+                    <option value="4" name="others">Others</option>
+                </select>
+            </label>
+            <label for="#">
+                Provide a Bio:
+                
+                <textarea rows="10" cols="30" placeholder="I like coding in a rainy day..."></textarea>
+            </label>    
+            <input type="submit" value="submit">
+        </fieldset>
 </body>
 </html>
